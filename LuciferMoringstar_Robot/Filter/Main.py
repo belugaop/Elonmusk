@@ -307,11 +307,10 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 if f_caption is None:
                     f_caption = f"{files.file_name}"
                 buttons = [
-                    [
-                        InlineKeyboardButton('🎭 Updates Channel 🎭', url=f'{TUTORIAL}')
-                    ]
-                    ]
-                
+                          InlineKeyboardButton('🔍 Search ', switch_inline_query_current_chat=query),
+                          InlineKeyboardButton('🎭 Updates ', url=f'{TUTORIAL}')
+                          ]
+                                     
                 await query.answer()
                 await client.send_cached_media(
                     chat_id=query.from_user.id,
@@ -338,10 +337,9 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 if f_caption is None:
                     f_caption = f"{title}"
                 buttons = [
-                    [
-                        InlineKeyboardButton('🎭 Updates Channel 🎭', url=f'{TUTORIAL}')
-                    ]
-                    ]
+                          InlineKeyboardButton('🔍 Search ', switch_inline_query_current_chat=query),
+                          InlineKeyboardButton('🎭 Updates ', url=f'{TUTORIAL}')
+                          ]
                 
                 await query.answer()
                 await client.send_cached_media(
