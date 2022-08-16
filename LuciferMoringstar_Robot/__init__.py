@@ -20,8 +20,8 @@ HELP = """
 """
 
 ABOUT = """
-<b>➥ Name : Elon Musk Bot</b>
-<b>➥ Creator : <a href='https://t.me/Prince_Star_Lord'>ֆȶǟʀ ʟօʀɖ</a></b>
+<b>➥ My Name : Movies Bot 2</b>
+<b>➥ Devloper : <a href='https://t.me/Prince_Star_Lord'>ֆȶǟʀ ʟօʀɖ</a></b>
 <b>➥ Updates : <a href='https://t.me/M2LINKS'>M2LINKS</a></b>
 
 """
