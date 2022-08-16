@@ -206,7 +206,7 @@ async def ban(c, m):
         try:
             await c.send_message(
                 user_id,
-                f"You are Banned 🚫 to use this bot for **{ban_duration}** day(s) for the reason __{ban_reason}__ \n\n**Contact Us @M2LinksSupport 🤠**",
+                f"You are Banned 👿 to use this bot for **{ban_duration}** day(s) for the reason __{ban_reason}__ \n\n**Contact Us @M2LinksCommunity 🤠**",
             )
             ban_log_text += "\n\nUser notified successfully!"
         except BaseException:
@@ -336,10 +336,8 @@ async def delete(bot, message):
         await msg.edit('File not found in database')
 @Client.on_message(filters.command('about'))
 async def bot_info(bot, message):
-    buttons = [
-        [
-            
-            InlineKeyboardButton('Updates Channel', url=f'{TUTORIAL}')
-        ]
-        ]
+    buttons =[
+              InlineKeyboardButton('🔍 Search ', switch_inline_query_current_chat=query),
+              InlineKeyboardButton('🎭 Updates ', url=f'{TUTORIAL}')
+             ]
     await message.reply(text=f"{ABOUT}", reply_markup=InlineKeyboardMarkup(buttons), disable_web_page_preview=True)
