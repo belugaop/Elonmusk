@@ -53,7 +53,7 @@ async def filter(client, message):
     if 2 < len(message.text) < 100:    
         btn = []
         search = message.text
-        mo_tech_yt = f"**🗂️ Title:** {search}\n**⭐ Rating:** {random.choice(RATING)}\n**🎭 Genre:** {random.choice(GENRES)}\n**📤 Uploaded By @M2LINKS**"
+        mo_tech_yt = f"**Query:** {query}\n\n**🗂️ Title:** {search}\n**⭐ Rating:** {random.choice(RATING)}\n**🎭 Genre:** {random.choice(GENRES)}**"
         files = await get_filter_results(query=search)
         if files:
             for file in files:
@@ -115,7 +115,7 @@ async def group(client, message):
     if 2 < len(message.text) < 50:    
         btn = []
         search = message.text
-        mo_tech_yt = f"**🗂️ Title:** {search}\n**⭐ Rating:** {random.choice(RATING)}\n**🎭 Genre:** {random.choice(GENRES)}\n**📤 Uploaded By @M2LINKS **"
+        mo_tech_yt = f"**Query:** {query}\n\n**🗂️ Title:** {search}\n**⭐ Rating:** {random.choice(RATING)}\n**🎭 Genre:** {random.choice(GENRES)}**"
         nyva=BOT.get("username")
         if not nyva:
             botusername=await client.get_me()
@@ -276,18 +276,22 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 return
         elif query.data == "help":
             buttons = [
-                [
-                    InlineKeyboardButton('Updates Channel', url=f'{TUTORIAL}')
-                ]
-                ]
+                  InlineKeyboardButton('🎭 Updates', url='https://t.me/M2LINKS'),
+                  InlineKeyboardButton('🏠 Home', callback_data='start')
+                      ],
+                 InlineKeyboardButton('🏠 Close', callback_data='close_data')
+            
             await query.message.edit(text=f"{HELP}", reply_markup=InlineKeyboardMarkup(buttons), disable_web_page_preview=True)
 
         elif query.data == "about":
-            buttons = [
-                [
-                    InlineKeyboardButton('Updates Channel', url=f'{TUTORIAL}')
-                ]
-                ]
+            buttons = [[
+                  InlineKeyboardButton('🎭 Updates', url='https://t.me/M2LINKS'),
+                  InlineKeyboardButton('🏠 Home', callback_data='start')
+                      ],
+                      [
+                  InlineKeyboardButton('🏠 Close', callback_data='close_data')
+                     ]]
+            
             await query.message.edit(text=f"{ABOUT}", reply_markup=InlineKeyboardMarkup(buttons), disable_web_page_preview=True)
 
 
