@@ -119,15 +119,16 @@ async def start(bot, message):
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
                 [[
-                InlineKeyboardButton("➕ Add Me To Your Groups ➕", url='http://t.me/The_Moviez_Bot?startgroup=true')
-                ],[
-                InlineKeyboardButton("Search 🔍", switch_inline_query_current_chat=''), 
-                InlineKeyboardButton("Update 🎭", url='https://t.me/M2LINKS') 
+                InlineKeyboardButton("➕ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘs ➕", url='http://t.me/The_Moviez_Bot?startgroup=true')
+                ],
+                [
+       
+                InlineKeyboardButton("🔍 sᴇᴀʀᴄʜ ", switch_inline_query_current_chat=''),
+               
+                InlineKeyboardButton('🎭 ᴜᴘᴅᴀᴛᴇs', url='https://t.me/M2LINKS')
+              ] 
 
-                ],[
-                InlineKeyboardButton("Owner ❤️", url='https://t.me/Prince_Star_Lord'),
-                InlineKeyboardButton("About 🙄", callback_data="about")
-                ]]
+               ]
             )
         )
         StopPropagation
@@ -337,7 +338,8 @@ async def delete(bot, message):
 @Client.on_message(filters.command('about'))
 async def bot_info(bot, message):
     buttons =[
-              InlineKeyboardButton('🔍 Search ', switch_inline_query_current_chat=query),
-              InlineKeyboardButton('🎭 Updates ', url=f'{TUTORIAL}')
+              InlineKeyboardButton("🔍 sᴇᴀʀᴄʜ ", switch_inline_query_current_chat=''),
+               
+              InlineKeyboardButton('🎭 ᴜᴘᴅᴀᴛᴇs', url='https://t.me/M2LINKS')
              ]
     await message.reply(text=f"{ABOUT}", reply_markup=InlineKeyboardMarkup(buttons), disable_web_page_preview=True)
