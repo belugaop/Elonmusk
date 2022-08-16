@@ -84,7 +84,7 @@ async def start(bot, message):
                     f_caption = f"{files.file_name}"
                 buttons = [
               [
-                InlineKeyboardButton("🔍 sᴇᴀʀᴄʜ ", switch_inline_query_current_chat='')
+                InlineKeyboardButton("🔍 sᴇᴀʀᴄʜ ", switch_inline_query_current_chat=''),
                
                 InlineKeyboardButton('🎭 ᴜᴘᴅᴀᴛᴇs', url='https://t.me/M2LINKS')
               ] 
