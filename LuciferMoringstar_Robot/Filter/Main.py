@@ -275,12 +275,14 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 )
                 return
         elif query.data == "help":
-            buttons = [
+            buttons = [[
                   InlineKeyboardButton('🎭 Updates', url='https://t.me/M2LINKS'),
                   InlineKeyboardButton('🏠 Home', callback_data='start')
                       ],
-                 InlineKeyboardButton('🏠 Close', callback_data='close_data')
-            
+                [
+                    InlineKeyboardButton('🏠 Close', callback_data='close_data')
+                ]
+                  ]
             await query.message.edit(text=f"{HELP}", reply_markup=InlineKeyboardMarkup(buttons), disable_web_page_preview=True)
 
         elif query.data == "about":
