@@ -10,19 +10,9 @@ from .Channel import (
    GENRES
 )
 
-HELP = """
-
-
-/start :- check am Alive 👀
-
-
-
-"""
+HELP = """ /start :- check am Alive 👀 """
 
 ABOUT = """
 <b>➥ My Name : Movies Bot 2</b>
 <b>➥ Devloper : <a href='https://t.me/Prince_Star_Lord'>ֆȶǟʀ ʟօʀɖ</a></b>
-<b>➥ Updates : <a href='https://t.me/M2LINKS'>M2LINKS</a></b>
-
-"""
-
+<b>➥ Updates : <a href='https://t.me/M2LINKS'>M2LINKS</a></b> """
