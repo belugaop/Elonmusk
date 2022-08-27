@@ -127,7 +127,7 @@ async def group(client, message):
                 file_id = file.file_id
                 filename = f"[{get_size(file.file_size)}] {file.file_name}"
                 btn.append(
-                    [InlineKeyboardButton(text=f"{filename}", url=f"https://tnlink.in/api?api=e3f0bc12d6e82e2276c6f6beb37c5634979664fd&url=https://telegram.dog/{nyva}?start=pr0fess0r_99_-_-_-_{file_id}")]
+                    [InlineKeyboardButton(text=f"{filename}", url=f"https://api.shareus.in/shortLink?token=xGzniHOkadfY4aP4HKbnGxHGGkv1&link=https://telegram.dog/{nyva}?start=pr0fess0r_99_-_-_-_{file_id}")]
                 )
         else:
             return
